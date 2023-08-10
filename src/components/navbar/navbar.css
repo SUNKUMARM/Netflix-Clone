@@ -1,0 +1,51 @@
+.navbar {
+  position: absolute;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+.navbar-logo {
+  width: 130px;
+  object-fit: contain;
+  margin-left: 20px;
+}
+.navbar-avatar {
+  width: 35px;
+  object-fit: contain;
+  height: 2.9rem;
+  border-radius: 8px;
+}
+.navbar-lists {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  gap: 30px;
+}
+.navbar-list {
+  display: flex;
+  gap: 30px;
+  color: white;
+  list-style-type: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.navbar-button {
+  width: 80px;
+  height: 2.2rem;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(177, 10, 10);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+.navbar-second-list {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 30%;
+  gap: 30px;
+  margin-right: 50px;
+}
