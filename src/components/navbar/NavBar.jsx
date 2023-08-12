@@ -1,26 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../assets/Netflix_Logo.png";
 import avatar from "../assets/profile.png";
 import "./navbar.css";
 import { useNetflixContext } from "../../context/NetflixContextProvider";
 
-const NavBar = () => {
+const NavBar = ({ children }) => {
   const { navLists } = useNetflixContext();
+
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 150) {
+        setShow(true);
+      } else {
+        setShow(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="navbar">
-      <div className="navbar-lists">
-        <img className="navbar-logo" src={logo} alt="Netflix logo" />
-        <div className="navbar-list">
-          {navLists.map((list) => (
-            <li key={list.id}>{list.title}</li>
-          ))}
+    <>
+      <div className={`navbar ${show && "navbar-black"}`}>
+        <div className="navbar-lists">
+          <img className="navbar-logo" src={logo} alt="Netflix logo" />
+          <div className="navbar-list">
+            {navLists.map((list) => (
+              <li key={list.id}>{list.title}</li>
+            ))}
+          </div>
+        </div>
+        <div className="navbar-second-list">
+          <img className="navbar-avatar" src={avatar} alt="Netflix logo" />
+          <button className="navbar-button">Log Out</button>
         </div>
       </div>
-      <div className="navbar-second-list">
-        <img className="navbar-avatar" src={avatar} alt="Netflix logo" />
-        <button className="navbar-button">Log Out</button>
-      </div>
-    </div>
+    </>
   );
 };
 

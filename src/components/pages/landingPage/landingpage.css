@@ -1,0 +1,44 @@
+.landing-page-banner {
+  height: 120vh;
+}
+.landing-page-contents {
+  margin-left: 30px;
+  padding-top: 50px;
+  height: 140px;
+  color: white;
+  display: grid;
+  gap: 1.3rem;
+  text-align: center;
+  margin-bottom: 6.5rem;
+}
+.landing-page-title {
+  font-size: 3rem;
+  font-weight: 900;
+}
+.landing-page-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-right: 2.5rem;
+}
+.landing-page-description {
+  font-size: 1.25rem;
+  font-weight: 500;
+  /* background-size: ; */
+}
+.fade {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.4) 10%,
+    rgba(0, 0, 0, 0.5) 20%,
+    rgba(0, 0, 0, 0.8) 90%
+  );
+}
+.button-icon {
+  position: relative;
+  right: 2.8rem;
+  font-size: 1.4rem;
+}

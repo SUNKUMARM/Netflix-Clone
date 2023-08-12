@@ -1,10 +1,11 @@
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0px;
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 10px;
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
 }
 .navbar-logo {
   width: 130px;
@@ -20,12 +21,11 @@
 .navbar-lists {
   display: flex;
   align-items: center;
-  width: 70%;
-  gap: 30px;
+  gap: 2rem;
 }
 .navbar-list {
   display: flex;
-  gap: 30px;
+  gap: 2rem;
   color: white;
   list-style-type: none;
   font-weight: 600;
@@ -38,7 +38,7 @@
   border: none;
   background-color: rgb(177, 10, 10);
   color: white;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 600;
 }
 .navbar-second-list {
@@ -46,6 +46,9 @@
   justify-content: end;
   align-items: center;
   width: 30%;
-  gap: 30px;
-  margin-right: 50px;
+  gap: 2rem;
+  margin-right: 3rem;
+}
+.navbar-black {
+  background-color: #111;
 }

@@ -1,0 +1,59 @@
+.landing-page-nav {
+  position: absolute;
+  width: 100%;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.landing-page-nav-logo {
+  width: 190px;
+  margin-left: 8.3rem;
+}
+.landing-page-nav-sublist {
+  display: flex;
+  margin-right: 9.5rem;
+}
+.nav-options {
+  height: 2rem;
+  width: 7rem;
+  padding-left: 2.5rem;
+  color: white;
+  background-color: #111;
+  width: 8rem;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  appearance: none;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.nav-button {
+  height: 2rem;
+  width: 5rem;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.landing-page-icon {
+  position: relative;
+  left: 2rem;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+.landing-page-nav-list {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+.landing-page-icon-two {
+  position: relative;
+  color: white;
+  right: 2rem;
+  font-size: 1.4rem;
+  font-weight: bolder;
+}
