@@ -1,0 +1,8 @@
+.direction-parent {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 91vh;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}

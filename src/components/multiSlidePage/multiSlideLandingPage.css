@@ -1,0 +1,58 @@
+.title-content {
+  display: flex;
+  height: 70vh;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  margin-left: 7rem;
+  margin-right: 13rem;
+}
+.multi-slide-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 91vh;
+  background-color: black;
+  gap: 10px;
+}
+.image-parent {
+  display: flex;
+  align-items: center;
+}
+.slide-image {
+  height: 23rem;
+}
+.video-one {
+  margin-top: 76px;
+  margin-left: 66px;
+  height: 201px;
+  width: 355px;
+}
+.video-two {
+  margin-top: 16px;
+  margin-left: 88px;
+  height: 201px;
+  width: 305px;
+}
+.slide-image {
+  height: 23rem;
+}
+.image-parent {
+  position: absolute;
+}
+.multi-slide-text {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  width: 40vw;
+}
+.multi-head-title {
+  font-size: 3rem;
+  font-weight: 900;
+}
+.multi-head-description {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
