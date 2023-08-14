@@ -13,6 +13,8 @@ import tvVideo1 from "../../../components/assets/tvVideo1.m4v";
 import tvVideo2 from "../../../components/assets/tvVideo2.m4v";
 import MultiSlideDirection from "../../multiSlidePage/multiSlideDirection/MultiSlideDirection";
 import FrequentlyAskedQuestion from "../faq page/FrequentlyAskedQuestion";
+import Footer from "../footer/Footer";
+import LanguageOption from "../../navbar/landingPageNav/LanguageOption";
 
 const LandingPage = () => {
   return (
@@ -135,6 +137,33 @@ const LandingPage = () => {
             className="input-start-button"
           />
           <MdArrowForwardIos className="button-icon" />
+        </div>
+      </div>
+      <div className="footer-container">
+        <div className="footer-parent">
+          <p className="footer">
+            Questions? Call{" "}
+            <span className="footer-content-text">000-800-919-1694</span>
+          </p>
+          <div className="footer-content footer">
+            <Footer content="FAQ" />
+            <Footer content="Help Centre" />
+            <Footer content="Account" />
+            <Footer content="Media Centre" />
+            <Footer content="Investor Relations" />
+            <Footer content="Jobs" />
+            <Footer content="Ways to Watch" />
+            <Footer content="Terms of Use" />
+            <Footer content="Privacy" />
+            <Footer content="Cookie Preferences" />
+            <Footer content="Corporate Information" />
+            <Footer content="Contact Us" />
+            <Footer content="Speed Test" />
+            <Footer content="Legal Notices" />
+            <Footer content="Only on Netflix" />
+          </div>
+          <LanguageOption />
+          <p className="footer">Netflix India</p>
         </div>
       </div>
     </div>
