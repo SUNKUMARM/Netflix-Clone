@@ -3,12 +3,12 @@ import logo from "../assets/Netflix_Logo.png";
 import avatar from "../assets/profile.png";
 import "./navbar.css";
 import { useNetflixContext } from "../../context/NetflixContextProvider";
+import { useNavigate } from "react-router-dom";
 
-const NavBar = ({ children }) => {
+const NavBar = () => {
   const { navLists } = useNetflixContext();
-
   const [show, setShow] = useState(false);
-
+  const navigator = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 150) {
@@ -37,7 +37,9 @@ const NavBar = ({ children }) => {
         </div>
         <div className="navbar-second-list">
           <img className="navbar-avatar" src={avatar} alt="Netflix logo" />
-          <button className="navbar-button">Log Out</button>
+          <button className="navbar-button" onClick={() => navigator("/")}>
+            Log Out
+          </button>
         </div>
       </div>
     </>

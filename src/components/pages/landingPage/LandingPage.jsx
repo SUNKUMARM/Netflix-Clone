@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import banner from "../../assets/banner.jpg";
 import "./landingpage.css";
 import LandingPageNav from "../../navbar/landingPageNav/LandingPageNav";
@@ -17,6 +17,11 @@ import Footer from "../footer/Footer";
 import LanguageOption from "../../navbar/landingPageNav/LanguageOption";
 
 const LandingPage = () => {
+  const [user, setUser] = useState({ email: "", password: "" });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUser({ ...user, [name]: value });
+  };
   return (
     <div className="landing-page">
       <div
@@ -40,12 +45,14 @@ const LandingPage = () => {
               Ready to watch? Enter your email to create or restart your
               membership.
             </h3>
-            <div className="input">
+            <di className="input">
               <InputFeild
                 className="input-email"
                 type="email"
                 placeholder="Email adders"
                 required
+                value={user.email}
+                onchange={handleChange}
               />
               <InputFeild
                 type="submit"
@@ -53,7 +60,7 @@ const LandingPage = () => {
                 className="input-start-button"
               />
               <MdArrowForwardIos className="button-icon" />
-            </div>
+            </di>
           </div>
         </div>
       </div>
@@ -132,6 +139,8 @@ const LandingPage = () => {
             type="email"
             placeholder="Email adders"
             required
+            value={user.email}
+            onchange={handleChange}
           />
           <InputFeild
             type="submit"

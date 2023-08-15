@@ -5,9 +5,11 @@ import logo from "../../../components/assets/Netflix_Logo.png";
 import InputFeild from "../../inputFeild/InputFeild";
 import Footer from "../footer/Footer";
 import LanguageOption from "../../navbar/landingPageNav/LanguageOption";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [show, setShow] = useState(false);
+  const navigator = useNavigate();
   return (
     <div
       className="login-container"
@@ -23,18 +25,24 @@ const LoginPage = () => {
         </div>
         <div className="login-grand-parent login-flex ">
           <div className="login-parent login-flex ">
-            <div className="login login-flex ">
+            <form
+              className="login login-flex "
+              onClick={(e) => {
+                e.preventDefault();
+                navigator("/movies");
+              }}
+            >
               <h1 className="login-title">Sign In</h1>
               <span className="input-parent login-flex ">
                 <InputFeild
                   placeholder="Email or phone number"
                   required
-                  className="input"
+                  className="input-box"
                 />
                 <InputFeild
                   placeholder="Password"
                   type="password"
-                  className="input"
+                  className="input-box"
                 />
               </span>
               <div className="login-remember login-flex ">
@@ -51,10 +59,14 @@ const LoginPage = () => {
                   <p>Need help?</p>
                 </div>
               </div>
-            </div>
+            </form>
             <div className="login-description">
               <h4 className="login-sign-up">
-                New to Netflix? <b className="bold"> Sign up now.</b>
+                New to Netflix?{" "}
+                <b className="bold" onClick={() => navigator("/")}>
+                  {" "}
+                  Sign up now.
+                </b>
               </h4>
               <p>
                 This page is protected by Google reCAPTCHA to ensure you're not
