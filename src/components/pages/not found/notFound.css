@@ -1,0 +1,56 @@
+.not-found-container {
+  height: 100vh;
+}
+.not-found-parent {
+  height: 87.5vh;
+}
+.netflix-logo {
+  width: 135px;
+  position: relative;
+  left: 25px;
+  padding: 0.5rem;
+}
+.not-found-content-outer {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.not-found-content {
+  width: 60vw;
+  height: 87vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 2.5rem;
+  row-gap: 2rem;
+}
+.not-fount-title {
+  font-size: 4rem;
+  font-weight: 700;
+}
+.not-fount-description {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.not-found-button {
+  width: 9.5rem;
+  height: 2.8rem;
+  align-self: center;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.not-found-error {
+  border-left: 2px solid red;
+  align-self: center;
+  font-size: 1.8rem;
+  font-weight: 300;
+  height: 3.5rem;
+  padding: 0.5rem 0 0 0.5rem;
+}

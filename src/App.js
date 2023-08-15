@@ -1,5 +1,6 @@
 import "./App.css";
-import LoginPage from "./components/pages/login page/LoginPage";
+import NotFound from "./components/pages/not found/NotFound";
+// import LoginPage from "./components/pages/login page/LoginPage";
 // import LandingPage from "../src/components/pages/landingPage/LandingPage";
 // import Requests from "./api/requests";
 // import Banner from "./components/banner/Banner";
@@ -9,7 +10,8 @@ import LoginPage from "./components/pages/login page/LoginPage";
 function App() {
   return (
     <div className="app">
-      <LoginPage />
+      <NotFound />
+      {/* <LoginPage /> */}
       {/* <LandingPage /> */}
       {/* <NavBar />
       <Banner />
