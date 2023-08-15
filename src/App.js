@@ -1,5 +1,6 @@
 import "./App.css";
-import LandingPage from "../src/components/pages/landingPage/LandingPage";
+import LoginPage from "./components/pages/login page/LoginPage";
+// import LandingPage from "../src/components/pages/landingPage/LandingPage";
 // import Requests from "./api/requests";
 // import Banner from "./components/banner/Banner";
 // import NavBar from "./components/navbar/NavBar";
@@ -8,7 +9,8 @@ import LandingPage from "../src/components/pages/landingPage/LandingPage";
 function App() {
   return (
     <div className="app">
-      <LandingPage />
+      <LoginPage />
+      {/* <LandingPage /> */}
       {/* <NavBar />
       <Banner />
       <Row

@@ -45,6 +45,7 @@ const LandingPage = () => {
                 className="input-email"
                 type="email"
                 placeholder="Email adders"
+                required
               />
               <InputFeild
                 type="submit"
@@ -130,6 +131,7 @@ const LandingPage = () => {
             className="input-email"
             type="email"
             placeholder="Email adders"
+            required
           />
           <InputFeild
             type="submit"

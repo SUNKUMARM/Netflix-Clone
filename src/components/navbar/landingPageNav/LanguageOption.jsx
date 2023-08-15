@@ -1,6 +1,7 @@
 import React from "react";
 import { PiGlobeLight } from "react-icons/pi";
 import { IoMdArrowDropdown } from "react-icons/io";
+import "./languageOption.css";
 
 const LanguageOption = () => {
   return (

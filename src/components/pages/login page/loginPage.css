@@ -1,0 +1,129 @@
+.login-container {
+  height: 210vh;
+}
+.login-semi-container {
+  height: 210vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.login-logo-nav {
+  color: white;
+  height: 6rem;
+  padding-left: 1rem;
+}
+.login-logo {
+  width: 13rem;
+}
+.login-parent {
+  border-radius: 5px;
+  color: white;
+  width: 35vw;
+  height: 130vh;
+  flex-direction: column;
+  margin-bottom: 6rem;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.login {
+  height: 70vh;
+  flex-direction: column;
+  gap: 2.2rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.login-description {
+  height: 45vh;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: gray;
+}
+.input-parent {
+  flex-direction: column;
+  justify-content: space-between;
+  height: 7.8rem;
+}
+.input {
+  height: 3.3rem;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(41, 40, 40);
+}
+.login-footer {
+  height: 45vh;
+  gap: 2rem;
+  flex-direction: column;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  padding-left: 8rem;
+  color: rgb(138, 134, 134);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.login-footer-content {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  color: rgb(138, 134, 134);
+}
+.language {
+  position: relative;
+  right: 1.7rem;
+}
+.login-grand-parent {
+  justify-content: center;
+}
+.login-remember {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.remember {
+  justify-content: space-between;
+  color: gray;
+}
+.input-sign-in {
+  height: 3.3rem;
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.checkbox {
+  width: 17px;
+  margin-right: 2px;
+  color: gray;
+}
+.login-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+.login-flex {
+  display: flex;
+}
+.login-sign-up {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.bold {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.learn-more {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: rgb(35, 92, 249);
+}
+.learn-more-description {
+  margin-top: 1.4rem;
+}
