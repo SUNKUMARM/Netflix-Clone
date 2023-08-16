@@ -15,9 +15,13 @@ import MultiSlideDirection from "../../multiSlidePage/multiSlideDirection/MultiS
 import FrequentlyAskedQuestion from "../faq page/FrequentlyAskedQuestion";
 import Footer from "../footer/Footer";
 import LanguageOption from "../../navbar/landingPageNav/LanguageOption";
+import { useNavigate } from "react-router-dom";
+
+const initial = { email: "", password: "" };
 
 const LandingPage = () => {
-  const [user, setUser] = useState({ email: "", password: "" });
+  const [user, setUser] = useState(initial);
+  const navigator = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
@@ -45,14 +49,22 @@ const LandingPage = () => {
               Ready to watch? Enter your email to create or restart your
               membership.
             </h3>
-            <di className="input">
+            <form
+              className="input"
+              onSubmit={(e) => {
+                e.preventDefault();
+                setUser(user);
+                navigator("/movies");
+              }}
+            >
               <InputFeild
                 className="input-email"
                 type="email"
                 placeholder="Email adders"
                 required
+                name="email"
                 value={user.email}
-                onchange={handleChange}
+                onChange={handleChange}
               />
               <InputFeild
                 type="submit"
@@ -60,7 +72,7 @@ const LandingPage = () => {
                 className="input-start-button"
               />
               <MdArrowForwardIos className="button-icon" />
-            </di>
+            </form>
           </div>
         </div>
       </div>
@@ -133,14 +145,22 @@ const LandingPage = () => {
         <p className="faq-title">
           Ready to watch? Enter your email to create or restart your membership.
         </p>
-        <div className="input">
+        <form
+          className="input"
+          onSubmit={(e) => {
+            e.preventDefault();
+            setUser(user);
+            navigator("/movies");
+          }}
+        >
           <InputFeild
             className="input-email"
             type="email"
             placeholder="Email adders"
             required
+            name="email"
             value={user.email}
-            onchange={handleChange}
+            onChange={handleChange}
           />
           <InputFeild
             type="submit"
@@ -148,7 +168,7 @@ const LandingPage = () => {
             className="input-start-button"
           />
           <MdArrowForwardIos className="button-icon" />
-        </div>
+        </form>
       </div>
       <div className="footer-container">
         <div className="footer-parent">

@@ -4,7 +4,8 @@ import "./inputFeild.css";
 const InputFeild = ({
   type = "text",
   required,
-  onchange,
+  onChange,
+  name = "",
   placeholder = "",
   value = "",
   className,
@@ -12,12 +13,13 @@ const InputFeild = ({
   return (
     <div>
       <input
+        name={name}
         type={type}
         placeholder={placeholder}
         required={required}
         value={value}
         className={className}
-        onchange={onchange}
+        onChange={onChange}
       />
     </div>
   );

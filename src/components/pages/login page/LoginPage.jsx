@@ -7,9 +7,18 @@ import Footer from "../footer/Footer";
 import LanguageOption from "../../navbar/landingPageNav/LanguageOption";
 import { useNavigate } from "react-router-dom";
 
+const initial = { email: "", password: "" };
+
 const LoginPage = () => {
   const [show, setShow] = useState(false);
+  const [users, setUsers] = useState(initial);
   const navigator = useNavigate();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUsers({ ...users, [name]: value });
+  };
+
   return (
     <div
       className="login-container"
@@ -27,8 +36,9 @@ const LoginPage = () => {
           <div className="login-parent login-flex ">
             <form
               className="login login-flex "
-              onClick={(e) => {
+              onSubmit={(e) => {
                 e.preventDefault();
+                setUsers(users);
                 navigator("/movies");
               }}
             >
@@ -36,17 +46,29 @@ const LoginPage = () => {
               <span className="input-parent login-flex ">
                 <InputFeild
                   placeholder="Email or phone number"
+                  type="email"
                   required
                   className="input-box"
+                  onChange={handleChange}
+                  value={users.email}
+                  name="email"
                 />
                 <InputFeild
                   placeholder="Password"
                   type="password"
+                  required
+                  onChange={handleChange}
+                  value={users.password}
+                  name="password"
                   className="input-box"
                 />
               </span>
               <div className="login-remember login-flex ">
-                <InputFeild value="Sign in" className="input-sign-in" />
+                <InputFeild
+                  value="Sign in"
+                  type="submit"
+                  className="input-sign-in"
+                />
                 <div className="remember login-flex">
                   <span className="login-checkbox login-flex ">
                     <input
