@@ -1,0 +1,27 @@
+.landing-page-nav {
+  position: absolute;
+  width: 100%;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.landing-page-nav-logo {
+  width: 190px;
+  margin-left: 8.3rem;
+}
+.landing-page-nav-sublist {
+  display: flex;
+  margin-right: 9.5rem;
+}
+
+.nav-button {
+  height: 2rem;
+  width: 5rem;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}

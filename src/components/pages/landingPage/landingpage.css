@@ -1,0 +1,102 @@
+.landing-page-banner {
+  height: 115vh;
+}
+.landing-page-contents {
+  margin-left: 30px;
+  padding-top: 50px;
+  height: 140px;
+  color: white;
+  display: grid;
+  gap: 1.5rem;
+  text-align: center;
+  margin-bottom: 6.5rem;
+}
+.landing-page-title {
+  font-size: 3rem;
+  font-weight: 900;
+}
+.landing-page-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-right: 2.5rem;
+}
+.landing-page-description {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.fade {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.4) 10%,
+    rgba(0, 0, 0, 0.5) 20%,
+    rgba(0, 0, 0, 0.8) 90%
+  );
+}
+.button-icon {
+  position: relative;
+  right: 2.8rem;
+  font-size: 1.4rem;
+  color: white;
+}
+.multi-slide-parent-container {
+  display: flex;
+  flex-direction: column;
+  border-top: 8px solid rgb(41, 40, 40);
+  gap: 8px;
+}
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  margin-top: 8px;
+  padding-bottom: 4rem;
+}
+.faq {
+  color: white;
+  margin-top: 4rem;
+  margin-bottom: 1.6rem;
+  font-size: 3rem;
+  font-weight: 900;
+}
+.landing-page {
+  background-color: rgb(48, 47, 47);
+}
+.faq-title {
+  color: white;
+  font-size: 1.4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.4rem;
+}
+.footer-container {
+  height: 80vh;
+  margin-top: 8px;
+  background-color: black;
+  padding-top: 4rem;
+}
+.footer-parent {
+  color: lightgray;
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-left: 7.9rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 0.8rem;
+}
+.footer {
+  padding-left: 1.8rem;
+}
+.footer-content-text {
+  text-decoration: underline lightgray;
+}
