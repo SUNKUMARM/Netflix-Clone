@@ -16,7 +16,7 @@ const MultiSlideLandingPage = ({
           <h1 className="multi-head-title">{title}</h1>
           <p className="multi-head-description">{paragraph}</p>
         </div>
-        <div>
+        <div className="image-video-parent">
           <div className="image-parent">
             <img className="slide-image" src={image} alt="tv-img" />
           </div>

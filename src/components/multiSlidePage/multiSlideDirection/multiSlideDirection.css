@@ -1,8 +1,27 @@
 .direction-parent {
   display: flex;
-  flex-direction: row-reverse;
-  height: 91vh;
-  justify-content: center;
+  min-height: 100vh;
   align-items: center;
   background-color: black;
+}
+
+@media (min-width: 320px) {
+  .direction-parent {
+    flex-direction: column;
+  }
+  .slide-image-direction {
+    height: 65vw;
+    height: 65vw;
+    padding-bottom: 1.5rem;
+  }
+}
+@media (min-width: 760px) {
+  .direction-parent {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  .slide-image-direction {
+    height: 40vw;
+    height: 40vw;
+  }
 }

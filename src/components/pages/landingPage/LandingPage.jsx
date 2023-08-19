@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import banner from "../../assets/banner.jpg";
 import "./landingpage.css";
 import LandingPageNav from "../../navbar/landingPageNav/LandingPageNav";
-import InputFeild from "../../inputFeild/InputFeild";
+import InputField from "../../inputField/InputField";
 import { MdArrowForwardIos } from "react-icons/md";
 import MultiSlideLandingPage from "../../multiSlidePage/MultiSlideLandingPage";
 import tv from "../../../components/assets/tv.png";
@@ -50,14 +50,14 @@ const LandingPage = () => {
               membership.
             </h3>
             <form
-              className="input"
+              className="landing-input"
               onSubmit={(e) => {
                 e.preventDefault();
                 setUser(user);
                 navigator("/movies");
               }}
             >
-              <InputFeild
+              <InputField
                 className="input-email"
                 type="email"
                 placeholder="Email adders"
@@ -66,12 +66,14 @@ const LandingPage = () => {
                 value={user.email}
                 onChange={handleChange}
               />
-              <InputFeild
-                type="submit"
-                value=" Get Started   "
-                className="input-start-button"
-              />
-              <MdArrowForwardIos className="button-icon" />
+              <div className="start-button-icon">
+                <InputField
+                  type="submit"
+                  value=" Get Started   "
+                  className="input-start-button"
+                />
+                <MdArrowForwardIos className="button-icon" />
+              </div>
             </form>
           </div>
         </div>
@@ -146,14 +148,14 @@ const LandingPage = () => {
           Ready to watch? Enter your email to create or restart your membership.
         </p>
         <form
-          className="input"
+          className="landing-input"
           onSubmit={(e) => {
             e.preventDefault();
             setUser(user);
             navigator("/movies");
           }}
         >
-          <InputFeild
+          <InputField
             className="input-email"
             type="email"
             placeholder="Email adders"
@@ -162,12 +164,14 @@ const LandingPage = () => {
             value={user.email}
             onChange={handleChange}
           />
-          <InputFeild
-            type="submit"
-            value=" Get Started   "
-            className="input-start-button"
-          />
-          <MdArrowForwardIos className="button-icon" />
+          <div className="start-button-icon">
+            <InputField
+              type="submit"
+              value=" Get Started   "
+              className="input-start-button"
+            />
+            <MdArrowForwardIos className="button-icon" />
+          </div>
         </form>
       </div>
       <div className="footer-container">
@@ -193,7 +197,9 @@ const LandingPage = () => {
             <Footer content="Legal Notices" />
             <Footer content="Only on Netflix" />
           </div>
-          <LanguageOption />
+          <div className="language-option-parent">
+            <LanguageOption />
+          </div>
           <p className="footer">Netflix India</p>
         </div>
       </div>

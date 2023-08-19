@@ -1,7 +1,7 @@
 import React from "react";
-import "./inputFeild.css";
+import "./inputField.css";
 
-const InputFeild = ({
+const InputField = ({
   type = "text",
   required,
   onChange,
@@ -25,4 +25,4 @@ const InputFeild = ({
   );
 };
 
-export default InputFeild;
+export default InputField;

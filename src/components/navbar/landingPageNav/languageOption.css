@@ -7,8 +7,8 @@
 }
 .landing-page-nav-list {
   display: flex;
-  gap: 0.4rem;
   align-items: center;
+  justify-content: end;
 }
 .landing-page-icon-two {
   position: relative;
@@ -18,16 +18,33 @@
   font-weight: bolder;
 }
 .nav-options {
-  height: 2rem;
-  width: 7rem;
-  padding-left: 2.5rem;
-  color: white;
   background-color: #111;
-  width: 8rem;
   border: none;
-  font-size: 0.9rem;
   font-weight: 500;
   appearance: none;
   border: 1px solid gray;
   border-radius: 5px;
+}
+@media (min-width: 320px) {
+  .landing-page-nav-list {
+    justify-content: end;
+  }
+  .nav-options {
+    height: 1.6rem;
+    width: 4rem;
+  }
+}
+
+@media (min-width: 750px) {
+  .landing-page-nav-list {
+    gap: 0.4rem;
+  }
+  .nav-options {
+    height: 2rem;
+    width: 7rem;
+    padding-left: 2.5rem;
+    color: white;
+    width: 8rem;
+    font-size: 0.9rem;
+  }
 }

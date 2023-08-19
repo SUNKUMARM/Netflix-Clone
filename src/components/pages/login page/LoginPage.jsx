@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./loginPage.css";
 import banner from "../../../components/assets/banner.jpg";
 import logo from "../../../components/assets/Netflix_Logo.png";
-import InputFeild from "../../inputFeild/InputFeild";
 import Footer from "../footer/Footer";
 import LanguageOption from "../../navbar/landingPageNav/LanguageOption";
 import { useNavigate } from "react-router-dom";
+import InputField from "../../inputField/InputField";
 
 const initial = { email: "", password: "" };
 
@@ -44,7 +44,7 @@ const LoginPage = () => {
             >
               <h1 className="login-title">Sign In</h1>
               <span className="input-parent login-flex ">
-                <InputFeild
+                <InputField
                   placeholder="Email or phone number"
                   type="email"
                   required
@@ -53,7 +53,7 @@ const LoginPage = () => {
                   value={users.email}
                   name="email"
                 />
-                <InputFeild
+                <InputField
                   placeholder="Password"
                   type="password"
                   required
@@ -64,7 +64,7 @@ const LoginPage = () => {
                 />
               </span>
               <div className="login-remember login-flex ">
-                <InputFeild
+                <InputField
                   value="Sign in"
                   type="submit"
                   className="input-sign-in"

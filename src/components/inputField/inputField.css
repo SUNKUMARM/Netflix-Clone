@@ -1,0 +1,43 @@
+@media (min-width: 320px) {
+  .input-email {
+    height: 2.4rem;
+    width: 14rem;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgb(89, 85, 85);
+    padding: 10px;
+    color: white;
+  }
+  .input-start-button {
+    height: 2.4rem;
+    width: 7.5rem;
+    border-radius: 5px;
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+}
+
+@media (min-width: 760px) {
+  .input-email {
+    height: 3.4rem;
+    width: 23rem;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgb(89, 85, 85);
+    padding: 10px;
+    color: white;
+  }
+  .input-start-button {
+    height: 3.4rem;
+    width: 12.5rem;
+    border-radius: 5px;
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}

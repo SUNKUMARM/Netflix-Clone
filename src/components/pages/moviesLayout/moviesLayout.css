@@ -1,0 +1,29 @@
+.movie-footer-container {
+  height: 60vh;
+  color: gray;
+  padding: 0 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+.movie-footer-icons {
+  display: flex;
+  color: gray;
+  font-size: 30px;
+  gap: 2.5rem;
+}
+.movie-footer-contents {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.5rem;
+}
+.movie-footer-code {
+  border: 2px solid gray;
+  width: 8rem;
+  height: 2.5rem;
+  text-align: center;
+  padding-top: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+}

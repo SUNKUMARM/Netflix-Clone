@@ -1,58 +1,113 @@
 .title-content {
+  min-height: 70vh;
   display: flex;
-  height: 70vh;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-  margin-left: 7rem;
-  margin-right: 13rem;
 }
 .multi-slide-parent {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 91vh;
+  min-height: 100vh;
+  width: 100%;
   background-color: black;
-  gap: 10px;
+}
+.image-video-parent {
+  display: flex;
 }
 .image-parent {
   display: flex;
-  align-items: center;
-}
-.slide-image {
-  height: 23rem;
-}
-.video-one {
-  margin-top: 76px;
-  margin-left: 66px;
-  height: 201px;
-  width: 355px;
-}
-.video-two {
-  margin-top: 16px;
-  margin-left: 88px;
-  height: 201px;
-  width: 305px;
-}
-.slide-image {
-  height: 23rem;
-}
-.image-parent {
-  position: absolute;
 }
 .multi-slide-text {
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  text-align: center;
   gap: 1rem;
-  padding: 2rem;
-  width: 40vw;
 }
 .multi-head-title {
-  font-size: 3rem;
   font-weight: 900;
 }
 .multi-head-description {
-  font-size: 1.5rem;
   font-weight: 400;
 }
+
+@media (min-width: 320px) {
+  .title-content {
+    flex-direction: column;
+  }
+  .image-video-parent {
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-parent {
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+  }
+  .slide-image {
+    height: 65vw;
+    height: 65vw;
+  }
+  .video-one {
+    margin-top: 13vw;
+    height: 36.1vw;
+    width: 65;
+    align-self: center;
+  }
+  .video-two {
+    margin-top: 8.5vw;
+    height: 30vw;
+    width: 60vw;
+  }
+  .multi-slide-text {
+    padding: 3rem 3.22rem;
+  }
+  .multi-head-title {
+    font-size: 1.6rem;
+  }
+  .multi-head-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* @media (min-width: 760px) {
+  .image-video-parent {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .title-content {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .multi-slide-parent {
+    flex-direction: row;
+    align-items: center;
+  }
+  .image-parent {
+    align-items: center;
+    position: absolute;
+  }
+  .slide-image {
+    height: 40vw;
+    width: 50vw;
+  }
+  .video-one {
+    margin-left: 6.6vw;
+    height: 38.5vw;
+    width: 38.7vw;
+  }
+  .video-two {
+    margin-left: 8.4vw;
+    height: 28.5vw;
+    width: 33vw;
+  }
+  .multi-slide-text {
+    justify-content: center;
+    height: 40vw;
+    padding: 2rem;
+    width: 40vw;
+  }
+  .multi-head-title {
+    font-size: 2rem;
+  }
+  .multi-head-description {
+    font-size: 1.25rem;
+  }
+} */
