@@ -19,9 +19,10 @@
   .direction-parent {
     flex-direction: row-reverse;
     justify-content: center;
+    gap: 5rem;
   }
   .slide-image-direction {
-    height: 40vw;
-    height: 40vw;
+    height: 35vw;
+    height: 35vw;
   }
 }

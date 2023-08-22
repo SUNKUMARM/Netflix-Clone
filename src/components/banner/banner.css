@@ -1,41 +1,32 @@
 .banner {
   color: white;
   object-fit: contain;
-  height: 110vh;
-  width: 100%;
+  margin-bottom: 20px;
 }
 .banner-contents {
-  margin-left: 30px;
-  padding-top: 230px;
-  height: 190px;
   color: white;
   font-weight: 700;
   display: grid;
   gap: 9px;
 }
 .banner-title {
-  font-size: 3.5rem;
   font-weight: 800;
   padding-bottom: 0.3rem;
 }
 .banner-description {
-  width: 45rem;
-  line-height: 1.5;
-  padding-top: 1rem;
-  font-size: 0.88rem;
   max-width: 380px;
   height: 80px;
   font-weight: 500;
+  line-height: 1.5;
+  padding-top: 1rem;
 }
 .banner-button {
   cursor: pointer;
   color: #fff;
   outline: none;
   border: none;
+  border-radius: 5px;
   font-weight: 700;
-  border-radius: 0.2vw;
-  padding-left: 2rem;
-  padding-right: 2rem;
   margin-right: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -47,11 +38,64 @@
   transition: all 0.2s;
 }
 .banner-fadeBottom {
-  height: 24.4rem;
   background-image: linear-gradient(
     180deg,
     transparent,
     rgba(37, 37, 37, 0.61),
     #111
   );
+}
+@media (min-width: 320px) {
+  .banner {
+    height: 80vh;
+  }
+  .banner-contents {
+    margin: 0 1rem;
+    padding-top: 170px;
+    font-size: 0.6rem;
+  }
+  .banner-title {
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+  }
+  .banner-description {
+    font-size: 0.8rem;
+  }
+  .banner-button {
+    font-size: 0.8rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .banner-fadeBottom {
+    height: 7.1rem;
+  }
+}
+
+@media (min-width: 760px) {
+  .banner {
+    height: 110vh;
+    width: 100%;
+  }
+  .banner-contents {
+    margin-left: 30px;
+    padding-top: 230px;
+    height: 190px;
+  }
+  .banner-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+  }
+  .banner-description {
+    width: 45rem;
+    font-size: 0.88rem;
+  }
+  .banner-button {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .banner-fadeBottom {
+    height: 24.4rem;
+  }
 }

@@ -108,6 +108,7 @@
     margin-right: 8px;
   }
   .start-button-icon {
+    cursor: pointer;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -159,6 +160,7 @@
     font-weight: 500;
   }
   .start-button-icon {
+    cursor: pointer;
     display: flex;
     align-items: center;
   }

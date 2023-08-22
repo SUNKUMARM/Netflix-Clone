@@ -30,7 +30,12 @@ const LoginPage = () => {
     >
       <div className="login-semi-container">
         <div className="login-logo-nav">
-          <img className="login-logo" src={logo} alt="logo" />
+          <img
+            className="login-logo"
+            src={logo}
+            alt="logo"
+            onClick={() => navigator("/")}
+          />
         </div>
         <div className="login-grand-parent login-flex ">
           <div className="login-parent login-flex ">
@@ -45,7 +50,7 @@ const LoginPage = () => {
               <h1 className="login-title">Sign In</h1>
               <span className="input-parent login-flex ">
                 <InputField
-                  placeholder="Email or phone number"
+                  placeholder="Email adders"
                   type="email"
                   required
                   className="input-box"
@@ -90,7 +95,7 @@ const LoginPage = () => {
                   Sign up now.
                 </b>
               </h4>
-              <p>
+              <p className="content-learn">
                 This page is protected by Google reCAPTCHA to ensure you're not
                 a bot.{" "}
                 <button className="learn-more" onClick={() => setShow(!show)}>

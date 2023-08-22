@@ -1,17 +1,13 @@
 .movie-footer-container {
-  height: 60vh;
   color: gray;
-  padding: 0 8rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-top: 4rem;
 }
 .movie-footer-icons {
   display: flex;
   color: gray;
   font-size: 30px;
-  gap: 2.5rem;
 }
 .movie-footer-contents {
   display: grid;
@@ -20,10 +16,35 @@
 }
 .movie-footer-code {
   border: 2px solid gray;
-  width: 8rem;
   height: 2.5rem;
   text-align: center;
   padding-top: 6px;
-  font-size: 1rem;
   font-weight: 600;
+}
+@media (min-width: 320px) {
+  .movie-footer-container {
+    padding: 1rem 0 1rem 20px;
+    font-size: 0.9rem;
+  }
+  .movie-footer-icons {
+    gap: 1.5rem;
+  }
+  .movie-footer-code {
+    width: 7rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 760px) {
+  .movie-footer-container {
+    /* height: 60vh; */
+    padding: 4rem 6rem;
+  }
+  .movie-footer-icons {
+    gap: 2.5rem;
+  }
+  .movie-footer-code {
+    width: 8rem;
+    font-size: 1rem;
+  }
 }

@@ -1,41 +1,20 @@
-.login-container {
-  height: 210vh;
-}
 .login-semi-container {
-  height: 210vh;
   background-color: rgba(0, 0, 0, 0.7);
 }
 .login-logo-nav {
   color: white;
-  height: 6rem;
   padding-left: 1rem;
-}
-.login-logo {
-  width: 13rem;
 }
 .login-parent {
   border-radius: 5px;
   color: white;
-  width: 35vw;
-  height: 130vh;
   flex-direction: column;
-  margin-bottom: 6rem;
   background-color: rgba(0, 0, 0, 0.7);
 }
 .login {
-  height: 70vh;
   flex-direction: column;
-  gap: 2.2rem;
-  margin-left: 4rem;
-  margin-right: 4rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
 }
 .login-description {
-  height: 45vh;
-  margin-left: 4rem;
-  margin-right: 4rem;
-  margin-bottom: 2rem;
   font-size: 0.9rem;
   font-weight: 400;
   color: gray;
@@ -43,36 +22,13 @@
 .input-parent {
   flex-direction: column;
   justify-content: space-between;
-  height: 7.8rem;
 }
 .input-box {
-  height: 3.3rem;
   width: 100%;
   padding: 1rem;
   border: none;
   border-radius: 5px;
   background-color: rgb(41, 40, 40);
-}
-.login-footer {
-  height: 45vh;
-  gap: 2rem;
-  flex-direction: column;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  padding-left: 8rem;
-  color: rgb(138, 134, 134);
-  background-color: rgba(0, 0, 0, 0.7);
-}
-.login-footer-content {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  color: rgb(138, 134, 134);
-}
-.language {
-  position: relative;
-  right: 1.7rem;
 }
 .login-grand-parent {
   justify-content: center;
@@ -81,29 +37,25 @@
   flex-direction: column;
   gap: 1rem;
 }
-
 .remember {
   justify-content: space-between;
   color: gray;
 }
 .input-sign-in {
-  height: 3.3rem;
+  cursor: pointer;
   width: 100%;
   text-align: center;
   color: white;
   background-color: red;
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
   font-weight: 600;
 }
 .checkbox {
-  width: 17px;
   margin-right: 2px;
   color: gray;
 }
 .login-title {
-  font-size: 2.3rem;
   font-weight: 700;
 }
 .login-flex {
@@ -111,19 +63,149 @@
 }
 .login-sign-up {
   margin-bottom: 1rem;
-  font-size: 1rem;
   font-weight: 500;
 }
 .bold {
+  cursor: pointer;
   color: white;
-  font-size: 1rem;
   font-weight: 500;
 }
 .learn-more {
+  cursor: pointer;
+  font-size: 0.85rem;
   border: none;
   background-color: rgba(0, 0, 0, 0.6);
   color: rgb(35, 92, 249);
 }
 .learn-more-description {
   margin-top: 1.4rem;
+}
+.login-footer {
+  gap: 2rem;
+  flex-direction: column;
+  color: rgb(138, 134, 134);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.login-footer-content {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  color: rgb(138, 134, 134);
+}
+.language {
+  align-self: flex-start;
+}
+
+@media (min-width: 320px) {
+  .login-logo-nav {
+    height: 4rem;
+    margin-bottom: 2rem;
+  }
+  .login-logo {
+    cursor: pointer;
+    width: 10rem;
+  }
+  .login-parent {
+    width: 80vw;
+  }
+  .login {
+    gap: 1.2rem;
+    padding: 1.5rem;
+  }
+  .login-description {
+    padding: 1.5rem;
+  }
+  .input-parent {
+    height: 5.3rem;
+  }
+  .input-box {
+    height: 2.3rem;
+  }
+  .remember {
+    font-size: 0.9rem;
+  }
+  .input-sign-in {
+    height: 2.3rem;
+    font-size: 0.8rem;
+  }
+  .checkbox {
+    width: 15px;
+  }
+  .login-title {
+    font-size: 1.8rem;
+  }
+
+  .login-sign-up {
+    font-size: 0.9rem;
+  }
+  .bold {
+    font-size: 0.9rem;
+  }
+  .content-learn {
+    font-size: 0.85rem;
+  }
+
+  .learn-more-description {
+    font-size: 0.85rem;
+  }
+  .login-footer {
+    padding: 2rem 3rem;
+    font-size: 0.85rem;
+  }
+  .language {
+    position: relative;
+    right: 1.2rem;
+  }
+}
+
+@media (min-width: 760px) {
+  .login-logo-nav {
+    height: 6rem;
+  }
+  .login-logo {
+    width: 13rem;
+  }
+  .login-parent {
+    width: 50%;
+    margin-bottom: 6rem;
+  }
+  .login {
+    gap: 2.2rem;
+    margin: 3rem 4rem 3rem 4rem;
+  }
+  .login-description {
+    margin: 0 4rem 2rem 4rem;
+  }
+  .input-parent {
+    height: 7.8rem;
+  }
+  .input-box {
+    height: 3.3rem;
+  }
+
+  .input-sign-in {
+    height: 3.3rem;
+    font-size: 1rem;
+  }
+  .checkbox {
+    width: 17px;
+  }
+  .login-title {
+    font-size: 2.3rem;
+  }
+  .login-sign-up {
+    font-size: 1rem;
+  }
+  .bold {
+    font-size: 1rem;
+  }
+  .login-footer {
+    padding-left: 8rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .language {
+    position: relative;
+    right: 1.5rem;
+  }
 }

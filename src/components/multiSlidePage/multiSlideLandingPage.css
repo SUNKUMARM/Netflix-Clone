@@ -1,24 +1,22 @@
 .title-content {
-  min-height: 70vh;
   display: flex;
 }
 .multi-slide-parent {
   display: flex;
-  min-height: 100vh;
-  width: 100%;
+  justify-content: center;
   background-color: black;
+}
+.slide-image {
+  position: relative;
 }
 .image-video-parent {
   display: flex;
-}
-.image-parent {
-  display: flex;
+  flex-direction: column;
 }
 .multi-slide-text {
   color: white;
   display: flex;
   flex-direction: column;
-  text-align: center;
   gap: 1rem;
 }
 .multi-head-title {
@@ -30,34 +28,32 @@
 
 @media (min-width: 320px) {
   .title-content {
+    min-height: 100vh;
     flex-direction: column;
   }
   .image-video-parent {
-    flex-direction: column;
     align-items: center;
-  }
-  .image-parent {
-    justify-content: center;
-    position: absolute;
-    width: 100%;
   }
   .slide-image {
     height: 65vw;
     height: 65vw;
   }
   .video-one {
+    position: absolute;
     margin-top: 13vw;
     height: 36.1vw;
-    width: 65;
+    width: 65vw;
     align-self: center;
   }
   .video-two {
+    position: absolute;
     margin-top: 8.5vw;
     height: 30vw;
     width: 60vw;
   }
   .multi-slide-text {
     padding: 3rem 3.22rem;
+    text-align: center;
   }
   .multi-head-title {
     font-size: 1.6rem;
@@ -67,47 +63,46 @@
   }
 }
 
-/* @media (min-width: 760px) {
+@media (min-width: 760px) {
   .image-video-parent {
-    flex-direction: column;
     justify-content: space-between;
   }
   .title-content {
     flex-direction: row;
-    gap: 1rem;
+    gap: 5rem;
+    height: 70vh;
+    justify-content: space-around;
+    align-items: center;
   }
   .multi-slide-parent {
     flex-direction: row;
-    align-items: center;
-  }
-  .image-parent {
-    align-items: center;
-    position: absolute;
   }
   .slide-image {
-    height: 40vw;
-    width: 50vw;
+    height: 35.2vw;
+    width: 44vw;
   }
   .video-one {
-    margin-left: 6.6vw;
-    height: 38.5vw;
-    width: 38.7vw;
+    margin-top: 0.5vh;
+    margin-left: 4vh;
+    height: 33vw;
+    width: 34vw;
   }
   .video-two {
-    margin-left: 8.4vw;
-    height: 28.5vw;
-    width: 33vw;
+    margin-top: 0.01rem;
+    height: 23.5vw;
+    width: 27vw;
   }
   .multi-slide-text {
+    text-align: left;
     justify-content: center;
     height: 40vw;
-    padding: 2rem;
+    padding: 2rem 0;
     width: 40vw;
   }
   .multi-head-title {
-    font-size: 2rem;
+    font-size: 3.5vw;
   }
   .multi-head-description {
-    font-size: 1.25rem;
+    font-size: 2vw;
   }
-} */
+}
