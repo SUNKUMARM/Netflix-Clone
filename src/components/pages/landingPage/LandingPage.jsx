@@ -54,7 +54,7 @@ const LandingPage = () => {
               onSubmit={(e) => {
                 e.preventDefault();
                 setUser(user);
-                navigator("/movies");
+                navigator("/signUp");
               }}
             >
               <InputField
@@ -152,7 +152,7 @@ const LandingPage = () => {
           onSubmit={(e) => {
             e.preventDefault();
             setUser(user);
-            navigator("/movies");
+            navigator("/signUp");
           }}
         >
           <InputField

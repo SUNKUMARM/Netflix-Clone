@@ -5,14 +5,17 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import NetflixContextProvider from "./context/NetflixContextProvider";
 import { BrowserRouter } from "react-router-dom";
+import AuthContextProvider from "./context/AuthContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <NetflixContextProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <AuthContextProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </AuthContextProvider>
     </NetflixContextProvider>
   </React.StrictMode>
 );

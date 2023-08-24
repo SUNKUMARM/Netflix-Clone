@@ -2,6 +2,9 @@ import React, { lazy } from "react";
 import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import Loading from "../components/pages/loading/Loading";
+import ProtectedRouter, {
+  ProtectedRouteForUnAuthorizedPage,
+} from "./ProtectedRouter";
 const LandingPage = lazy(() =>
   import("../components/pages/landingPage/LandingPage")
 );
@@ -12,6 +15,7 @@ const NotFound = lazy(() => import("../components/pages/not found/NotFound"));
 const MoviesLayout = lazy(() =>
   import("../components/pages/moviesLayout/MoviesLayout")
 );
+const SignUp = lazy(() => import("../components/pages/sign up/SignUp"));
 
 const AppRoutes = () => {
   return (
@@ -20,7 +24,19 @@ const AppRoutes = () => {
         path="/"
         element={
           <Suspense fallback={<Loading />}>
-            <LandingPage />
+            <ProtectedRouteForUnAuthorizedPage>
+              <LandingPage />
+            </ProtectedRouteForUnAuthorizedPage>
+          </Suspense>
+        }
+      />
+      <Route
+        path="/signUp"
+        element={
+          <Suspense fallback={<Loading />}>
+            <ProtectedRouteForUnAuthorizedPage>
+              <SignUp />
+            </ProtectedRouteForUnAuthorizedPage>
           </Suspense>
         }
       />
@@ -28,7 +44,9 @@ const AppRoutes = () => {
         path="/login"
         element={
           <Suspense fallback={<Loading />}>
-            <LoginPage />
+            <ProtectedRouteForUnAuthorizedPage>
+              <LoginPage />
+            </ProtectedRouteForUnAuthorizedPage>
           </Suspense>
         }
       />
@@ -36,10 +54,13 @@ const AppRoutes = () => {
         path="/movies"
         element={
           <Suspense fallback={<Loading />}>
-            <MoviesLayout />
+            <ProtectedRouter>
+              <MoviesLayout />
+            </ProtectedRouter>
           </Suspense>
         }
       />
+
       <Route
         path="/*"
         element={

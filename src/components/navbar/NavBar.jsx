@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import logo from "../assets/Netflix_Logo.png";
 import avatar from "../assets/profile.png";
 import "./navbar.css";
-// import { useNetflixContext } from "../../context/NetflixContextProvider";
 import { useNavigate } from "react-router-dom";
 import { AiFillCaretDown } from "react-icons/ai";
+import { useAuthContext } from "../../context/AuthContext";
 
 const NavBar = () => {
-  // const { navLists } = useNetflixContext();
+  const { logOut } = useAuthContext();
   const [show, setShow] = useState(false);
   const [view, setView] = useState(false);
   const navigator = useNavigate();
@@ -46,6 +46,15 @@ const NavBar = () => {
     setView(!view);
   };
 
+  const handleLogOut = async () => {
+    try {
+      await logOut();
+      navigator("/");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <div className={`navbar ${show && "navbar-black"}`}>
@@ -82,7 +91,7 @@ const NavBar = () => {
         </div>
         <div className="navbar-second-list">
           <img className="navbar-avatar" src={avatar} alt="Netflix logo" />
-          <button className="navbar-button" onClick={() => navigator("/")}>
+          <button className="navbar-button" onClick={handleLogOut}>
             Log Out
           </button>
         </div>

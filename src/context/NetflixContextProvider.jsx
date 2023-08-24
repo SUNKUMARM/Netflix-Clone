@@ -1,15 +1,15 @@
-import React, { createContext, useContext } from "react";
+import React, { createContext, useContext, useState } from "react";
 
 const NetflixContext = createContext(null);
 
 const NetflixContextProvider = ({ children }) => {
-  const navLists = [
-    { id: 1, title: "Home", link: "/home" },
-    { id: 2, title: "My List", link: "/my_list" },
-    { id: 3, title: "Search", link: "/search" },
-  ];
+  const [fav, setFav] = useState([]);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   return (
-    <NetflixContext.Provider value={{ navLists }}>
+    <NetflixContext.Provider
+      value={{ fav, setFav, email, setEmail, password, setPassword }}
+    >
       {children}
     </NetflixContext.Provider>
   );

@@ -4,6 +4,7 @@ import "./inputField.css";
 const InputField = ({
   type = "text",
   required,
+  id = "",
   onChange,
   name = "",
   placeholder = "",
@@ -13,6 +14,7 @@ const InputField = ({
   return (
     <div>
       <input
+        id={id}
         name={name}
         type={type}
         placeholder={placeholder}
