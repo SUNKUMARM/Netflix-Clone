@@ -9,7 +9,7 @@ import InputField from "../../inputField/InputField";
 import { useAuthContext } from "../../../context/AuthContext";
 
 const LoginPage = () => {
-  const { user, logIn } = useAuthContext();
+  const { logIn } = useAuthContext();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");

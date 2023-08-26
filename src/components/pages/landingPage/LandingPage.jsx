@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import banner from "../../assets/banner.jpg";
-import "./landingpage.css";
+import "./landingPage.css";
 import LandingPageNav from "../../navbar/landingPageNav/LandingPageNav";
 import InputField from "../../inputField/InputField";
 import { MdArrowForwardIos } from "react-icons/md";
@@ -120,7 +120,10 @@ const LandingPage = () => {
         <h1 className="faq">Frequently Asked Questions</h1>
         <FrequentlyAskedQuestion
           question={"What is Netflix?"}
-          answer={`Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!`}
+          answer={`Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.`}
+          second={
+            "You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!"
+          }
         />
         <FrequentlyAskedQuestion
           question={"How much does Netflix cost?"}
@@ -130,7 +133,10 @@ const LandingPage = () => {
         />
         <FrequentlyAskedQuestion
           question={"Where can I watch?"}
-          answer={`Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles. You can also download your favorite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.`}
+          answer={`Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles. `}
+          second={
+            "You can also download your favorite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere."
+          }
         />
         <FrequentlyAskedQuestion
           question={"How do I cancel?"}
@@ -142,7 +148,10 @@ const LandingPage = () => {
         />
         <FrequentlyAskedQuestion
           question={"Is Netflix good for kids?"}
-          answer={`The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space. Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.`}
+          answer={`The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space. `}
+          second={
+            "Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see."
+          }
         />
         <p className="faq-title">
           Ready to watch? Enter your email to create or restart your membership.

@@ -4,11 +4,11 @@ import server from "../../libs/axios";
 import "./row.css";
 import { v4 as uuid } from "uuid";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-
-const base_url = "https://image.tmdb.org/t/p/original/";
+import Movies from "../pages/movies/Movies";
 
 const Row = ({ title, fetchUrl, isLargeRow }) => {
   const [movies, setMovies] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       const response = await server.get(fetchUrl);
@@ -40,16 +40,10 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
         </div>
         <div id={"slider" + id} className="row-posters">
           {movies.map((movie) => (
-            <img
-              key={movie.id}
-              className={`row-single-poster ${isLargeRow && "row-posterLarge"}`}
-              src={`${base_url}${
-                isLargeRow ? movie.poster_path : movie.backdrop_path
-              }`}
-              alt="img"
-            />
+            <Movies key={movie.id} movie={movie} isLargeRow={isLargeRow} />
           ))}
         </div>
+
         <div className="right-side-button" onClick={slideButtonRight}>
           <AiOutlineRight />
         </div>

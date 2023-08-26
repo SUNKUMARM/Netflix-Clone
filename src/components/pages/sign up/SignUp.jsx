@@ -9,7 +9,7 @@ import { useAuthContext } from "../../../context/AuthContext";
 import "./signUp.css";
 
 const SignUp = () => {
-  const { user, signUp } = useAuthContext();
+  const { signUp } = useAuthContext();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");

@@ -3,7 +3,7 @@ import "./frequentlyAskedQuestion.css";
 import { BsPlusLg } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 
-const FrequentlyAskedQuestion = ({ question, answer }) => {
+const FrequentlyAskedQuestion = ({ question, answer, second = "" }) => {
   const [isShown, setIsShown] = useState(false);
   return (
     <div className="faq-parent">
@@ -16,6 +16,7 @@ const FrequentlyAskedQuestion = ({ question, answer }) => {
       {isShown && (
         <div className="faq-answer-parent">
           <p className="faq-answer-text">{answer}</p>
+          <p className="faq-answer-second">{second}</p>
         </div>
       )}
     </div>

@@ -8,6 +8,11 @@
   font-weight: 400;
   color: white;
 }
+.faq-answer-second {
+  padding: 1.5rem 0 0 0;
+  font-weight: 400;
+  color: white;
+}
 .faq-question {
   background-color: rgb(41, 40, 40);
   display: flex;

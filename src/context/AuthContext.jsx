@@ -1,22 +1,21 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { auth } from "../firebase";
+import { auth, db } from "../firebase";
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
-// import { doc, setDoc } from "firebase/firestore";
+import { doc, setDoc } from "firebase/firestore";
 
-const AuthContext = createContext(null);
+const AuthContext = createContext();
 
 const AuthContextProvider = ({ children }) => {
-  //   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
 
   const signUp = async (email, password) => {
     await createUserWithEmailAndPassword(auth, email, password);
-    // setDoc(doc(dataBase, "users", email), { favMovies: [] });
+    setDoc(doc(db, "users", email), { FavMovies: [] });
   };
 
   const logIn = (email, password) => {
@@ -29,9 +28,8 @@ const AuthContextProvider = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      //   localStorage.setItem("user", JSON.stringify(currentUser));
-      //   setUser(JSON.parse(localStorage.getItem("user")));
-      setUser(currentUser);
+      localStorage.setItem("user", JSON.stringify(currentUser));
+      setUser(JSON.parse(localStorage.getItem("user")));
     });
     return () => unsubscribe();
   }, []);

@@ -16,6 +16,8 @@ const MoviesLayout = lazy(() =>
   import("../components/pages/moviesLayout/MoviesLayout")
 );
 const SignUp = lazy(() => import("../components/pages/sign up/SignUp"));
+const MyList = lazy(() => import("../components/pages/my list/MyList"));
+const SearchPage = lazy(() => import("../components/pages/search/SearchPage"));
 
 const AppRoutes = () => {
   return (
@@ -60,7 +62,26 @@ const AppRoutes = () => {
           </Suspense>
         }
       />
-
+      <Route
+        path="/myList"
+        element={
+          <Suspense fallback={<Loading />}>
+            <ProtectedRouter>
+              <MyList />
+            </ProtectedRouter>
+          </Suspense>
+        }
+      />
+      <Route
+        path="/search"
+        element={
+          <Suspense fallback={<Loading />}>
+            <ProtectedRouter>
+              <SearchPage />
+            </ProtectedRouter>
+          </Suspense>
+        }
+      />
       <Route
         path="/*"
         element={

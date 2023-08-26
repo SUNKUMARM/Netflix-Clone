@@ -78,14 +78,14 @@ const NavBar = () => {
             {view && (
               <div className="list-content">
                 <p onClick={() => navigator("/movies")}>Home</p>
-                <p>My List</p>
-                <p>Search</p>
+                <p onClick={() => navigator("/myList")}>My List</p>
+                <p onClick={() => navigator("/search")}>Search</p>
               </div>
             )}
             <div id="myElement">
               <p onClick={() => navigator("/movies")}>Home</p>
-              <p>My List</p>
-              <p>Search</p>
+              <p onClick={() => navigator("/myList")}>My List</p>
+              <p onClick={() => navigator("/search")}>Search</p>
             </div>
           </div>
         </div>
