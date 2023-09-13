@@ -8,7 +8,7 @@
 .landing-page-nav-list {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .landing-page-icon-two {
   position: relative;

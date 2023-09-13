@@ -11,6 +11,7 @@ import { doc, setDoc } from "firebase/firestore";
 const AuthContext = createContext();
 
 const AuthContextProvider = ({ children }) => {
+  const [fav, setFav] = useState([]);
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
 
   const signUp = async (email, password) => {
@@ -35,7 +36,7 @@ const AuthContextProvider = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, signUp, logIn, logOut }}>
+    <AuthContext.Provider value={{ user, signUp, logIn, logOut, fav, setFav }}>
       {children}
     </AuthContext.Provider>
   );

@@ -12,8 +12,8 @@ const LoginPage = () => {
   const { logIn } = useAuthContext();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
   const [show, setShow] = useState(false);
+  const [error, setError] = useState("");
   const navigator = useNavigate();
 
   const handleSubmit = async (e) => {

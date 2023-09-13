@@ -4,6 +4,8 @@ import server from "../../../libs/axios";
 import NavBar from "../../../components/navbar/NavBar";
 import "./searchPage.css";
 
+const base_url = "https://image.tmdb.org/t/p/original/";
+
 const SearchPage = () => {
   const [search, setSearch] = useState("");
   const [movies, setMovies] = useState([]);
@@ -75,11 +77,12 @@ const SearchPage = () => {
       </form>
       <div className="">
         <h2 className="search-title">{title}</h2>
-        <div>
+        <div className="search-image-parent">
           {movies.map((movie) => (
             <img
+              className="search-image"
               key={movie.id}
-              src={movie.backdrop_path || movie.poster_path}
+              src={`${base_url}${movie.poster_path || movie.backdrop_path}`}
               alt={movie.name || movie.title}
             />
           ))}

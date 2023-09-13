@@ -8,7 +8,7 @@
 .landing-page-nav-sublist {
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .nav-button {
   border-radius: 5px;

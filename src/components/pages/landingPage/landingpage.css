@@ -110,7 +110,7 @@
   .start-button-icon {
     cursor: pointer;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
   }
   .faq-container {

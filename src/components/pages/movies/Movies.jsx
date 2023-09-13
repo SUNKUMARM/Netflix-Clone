@@ -7,7 +7,7 @@ import { db } from "../../../firebase";
 // const base_url = "https://image.tmdb.org/t/p/w500";
 const base_url = "https://image.tmdb.org/t/p/original/";
 
-const Movies = ({ isLargeRow, movie }) => {
+const Movies = ({ isLargeRow, movies, id }) => {
   const { user } = useAuthContext();
   const [like, setLike] = useState(false);
   const [fav, setFav] = useState([]);
@@ -45,30 +45,34 @@ const Movies = ({ isLargeRow, movie }) => {
   };
 
   return (
-    <div className="img-shown">
-      <img
-        className={`row-single-poster ${isLargeRow && "row-posterLarge"}`}
-        src={`${base_url}${
-          isLargeRow ? movie.poster_path : movie.backdrop_path
-        }`}
-        alt="img"
-      />
-      <div className="like-icon-parent">
-        <p className="like-heart" onClick={addFavMovie}>
-          {fav?.some((favMovie) => favMovie.id === movie.id) ? (
-            <AiFillHeart
-              className="movie-outline-heart"
-              onClick={() => removeFavMovie(movie)}
-            />
-          ) : (
-            <AiOutlineHeart
-              className="movie-fill-heart"
-              onClick={() => addFavMovie(movie)}
-            />
-          )}
-        </p>
-        <p className="movie-name">{movie.name || movie.title}</p>
-      </div>
+    <div id={"slider" + id} className="row-posters">
+      {movies.map((movie) => (
+        <div className="img-shown" key={movie.id}>
+          <img
+            className={`row-single-poster ${isLargeRow && "row-posterLarge"}`}
+            src={`${base_url}${
+              isLargeRow ? movie.poster_path : movie.backdrop_path
+            }`}
+            alt="img"
+          />
+          <div className="like-icon-parent">
+            <p className="like-heart" onClick={addFavMovie}>
+              {fav?.some((favMovie) => favMovie.id === movie.id) ? (
+                <AiFillHeart
+                  className="movie-outline-heart"
+                  onClick={() => removeFavMovie(movie)}
+                />
+              ) : (
+                <AiOutlineHeart
+                  className="movie-fill-heart"
+                  onClick={() => addFavMovie(movie)}
+                />
+              )}
+            </p>
+            <p className="movie-name">{movie.name || movie.title}</p>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

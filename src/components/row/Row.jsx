@@ -38,10 +38,8 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
         <div className="left-side-button" onClick={slideButtonLeft}>
           <AiOutlineLeft />
         </div>
-        <div id={"slider" + id} className="row-posters">
-          {movies.map((movie) => (
-            <Movies key={movie.id} movie={movie} isLargeRow={isLargeRow} />
-          ))}
+        <div>
+          <Movies movies={movies} isLargeRow={isLargeRow} id={id} />
         </div>
 
         <div className="right-side-button" onClick={slideButtonRight}>
