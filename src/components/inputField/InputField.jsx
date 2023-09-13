@@ -1,10 +1,12 @@
 import React from "react";
-import "./inputFeild.css";
+import "./inputField.css";
 
-const InputFeild = ({
+const InputField = ({
   type = "text",
   required,
-  onchange,
+  id = "",
+  onChange,
+  name = "",
   placeholder = "",
   value = "",
   className,
@@ -12,15 +14,17 @@ const InputFeild = ({
   return (
     <div>
       <input
+        id={id}
+        name={name}
         type={type}
         placeholder={placeholder}
         required={required}
         value={value}
         className={className}
-        onchange={onchange}
+        onChange={onChange}
       />
     </div>
   );
 };
 
-export default InputFeild;
+export default InputField;

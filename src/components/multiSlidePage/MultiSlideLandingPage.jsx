@@ -16,13 +16,11 @@ const MultiSlideLandingPage = ({
           <h1 className="multi-head-title">{title}</h1>
           <p className="multi-head-description">{paragraph}</p>
         </div>
-        <div>
-          <div className="image-parent">
-            <img className="slide-image" src={image} alt="tv-img" />
-          </div>
+        <div className="image-video-parent">
           {video && (
             <video className={tvVideo} src={video} autoPlay loop muted></video>
           )}
+          <img className="slide-image" src={image} alt="tv-img" />
         </div>
       </div>
     </div>

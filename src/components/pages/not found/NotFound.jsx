@@ -2,8 +2,10 @@ import React from "react";
 import "./notFound.css";
 import logo from "../../../components/assets/Netflix_Logo.png";
 import not from "../../../components/assets/not_found.png";
+import { useNavigate } from "react-router-dom";
 
 const NotFound = () => {
+  const navigator = useNavigate();
   return (
     <div className="not-found-container">
       <img className="netflix-logo" src={logo} alt="logo" />
@@ -22,7 +24,9 @@ const NotFound = () => {
               Sorry, we can't find that page. You'll find lots to explore on the
               home page.
             </h4>
-            <button className="not-found-button">Netflix Home</button>
+            <button className="not-found-button" onClick={() => navigator("/")}>
+              Netflix Home
+            </button>
             <p className="not-found-error">
               Error Code <b>NSES-404</b>
             </p>

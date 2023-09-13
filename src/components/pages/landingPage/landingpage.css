@@ -1,28 +1,9 @@
-.landing-page-banner {
-  height: 115vh;
-}
 .landing-page-contents {
-  margin-left: 30px;
-  padding-top: 50px;
-  height: 140px;
   color: white;
-  display: grid;
-  gap: 1.5rem;
   text-align: center;
-  margin-bottom: 6.5rem;
 }
 .landing-page-title {
-  font-size: 3rem;
   font-weight: 900;
-}
-.landing-page-subtitle {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-right: 2.5rem;
-}
-.landing-page-description {
-  font-size: 1.25rem;
-  font-weight: 500;
 }
 .fade {
   display: flex;
@@ -36,11 +17,8 @@
     rgba(0, 0, 0, 0.8) 90%
   );
 }
-.button-icon {
-  position: relative;
-  right: 2.8rem;
-  font-size: 1.4rem;
-  color: white;
+.landing-input {
+  display: flex;
 }
 .multi-slide-parent-container {
   display: flex;
@@ -48,55 +26,166 @@
   border-top: 8px solid rgb(41, 40, 40);
   gap: 8px;
 }
+.landing-page {
+  background-color: rgb(48, 47, 47);
+  width: 100%;
+}
 .faq-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: black;
   margin-top: 8px;
-  padding-bottom: 4rem;
 }
 .faq {
   color: white;
-  margin-top: 4rem;
-  margin-bottom: 1.6rem;
-  font-size: 3rem;
   font-weight: 900;
-}
-.landing-page {
-  background-color: rgb(48, 47, 47);
 }
 .faq-title {
   color: white;
-  font-size: 1.4rem;
-  margin-top: 2.5rem;
-  margin-bottom: 1.4rem;
 }
 .footer-container {
-  height: 80vh;
   margin-top: 8px;
   background-color: black;
-  padding-top: 4rem;
 }
 .footer-parent {
-  color: lightgray;
-  width: 75vw;
+  color: gray;
+  width: 80vw;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-left: 7.9rem;
   font-size: 0.9rem;
   font-weight: 400;
 }
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 0.8rem;
 }
+.language-option-parent {
+  display: flex;
+  flex-direction: row;
+}
 .footer {
-  padding-left: 1.8rem;
+  padding-left: 1rem;
 }
 .footer-content-text {
-  text-decoration: underline lightgray;
+  text-decoration: underline gray;
+}
+
+@media (min-width: 320px) {
+  .landing-page-banner {
+    height: 85vh;
+  }
+  .landing-page-contents {
+    padding: 0 1.8rem;
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .landing-page-title {
+    font-size: 1.5em;
+  }
+  .landing-page-subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .landing-page-description {
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+
+  .landing-input {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .button-icon {
+    position: absolute;
+    font-size: 16px;
+    color: white;
+    margin-right: 8px;
+  }
+  .start-button-icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .faq-container {
+    padding: 1rem 1.2rem;
+    padding-bottom: 3rem;
+  }
+  .faq {
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 1rem 1rem 1rem 1rem;
+  }
+  .faq-title {
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  .footer-container {
+    padding: 2rem 1rem 2rem 1rem;
+  }
+}
+
+@media (min-width: 760px) {
+  .landing-page-banner {
+    height: 115vh;
+  }
+  .landing-page-contents {
+    margin-left: 30px;
+    padding-top: 50px;
+    height: 140px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 14rem;
+  }
+  .landing-page-title {
+    font-size: 3rem;
+  }
+  .landing-page-subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-right: 2.5rem;
+  }
+  .landing-page-description {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  .start-button-icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  .button-icon {
+    position: relative;
+    right: 2rem;
+    font-size: 18px;
+  }
+  .landing-input {
+    flex-direction: row;
+  }
+  .faq-container {
+    padding-bottom: 4rem;
+  }
+  .faq {
+    margin-top: 4rem;
+    margin-bottom: 1.6rem;
+    font-size: 3rem;
+  }
+  .faq-title {
+    font-size: 1.4rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.4rem;
+  }
+  .footer-parent {
+    margin: 1rem 2rem 1rem 3rem;
+  }
 }

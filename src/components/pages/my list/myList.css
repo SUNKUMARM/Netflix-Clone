@@ -1,0 +1,23 @@
+.row {
+  color: white;
+  min-height: 100vh;
+  padding: 2rem;
+}
+.myList-nav {
+  padding-bottom: 4rem;
+}
+.my-row-title {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 320px) {
+  .netflix-logo {
+    height: 4rem;
+    width: 8rem;
+  }
+}
+@media (min-width: 760px) {
+  .netflix-logo {
+    width: 135px;
+  }
+}

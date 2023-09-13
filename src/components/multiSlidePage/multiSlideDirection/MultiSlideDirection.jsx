@@ -8,7 +8,7 @@ const MultiSlideDirection = ({ title, paragraph, image }) => {
         <h1 className="multi-head-title">{title}</h1>
         <p className="multi-head-description">{paragraph}</p>
       </div>
-      <img className="slide-image" src={image} alt="tv-img" />
+      <img className="slide-image-direction" src={image} alt="tv-img" />
     </div>
   );
 };

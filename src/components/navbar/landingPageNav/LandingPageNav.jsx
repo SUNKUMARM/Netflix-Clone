@@ -8,9 +8,11 @@ const LandingPageNav = () => {
   const navigator = useNavigate();
   return (
     <div className="landing-page-nav">
-      <img className="landing-page-nav-logo" src={logo} alt="logo" />
+      <div className="landing-page-image-parent">
+        <img className="landing-page-nav-logo" src={logo} alt="logo" />
+      </div>
       <div className="landing-page-nav-sublist">
-        <div className="landing-page-nav-list">
+        <div className="landing-page-nav-list-two">
           <LanguageOption />
           <button className="nav-button" onClick={() => navigator("/login")}>
             Sign In
